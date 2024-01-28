@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   loginForm.addEventListener('submit', function (event) {
     event.preventDefault(); // запрещаем перезагрузку страницы при отправке формы
 
-    //   убираем пробелы
+    // убираем пробелы
     const emailInput = loginForm.elements.email.value.trim();
     const passwordInput = loginForm.elements.password.value.trim();
 
