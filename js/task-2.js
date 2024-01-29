@@ -28,8 +28,10 @@ document.addEventListener('DOMContentLoaded', function () {
       alt: 'Zebras on Zebra',
     },
   ];
+  // Берём только первые три картинки из массива
+  const firstThreeImages = images.slice(0, 3);
 
-  const galleryHtml = images
+  const galleryHtml = firstThreeImages
     .map(function (image) {
       return `<li><img src="${image.url}" alt="${image.alt}" style="width: 360px; height: 300px;"></li>`;
     })
