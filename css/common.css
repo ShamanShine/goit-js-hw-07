@@ -15,7 +15,8 @@ body {
 
 .gallery {
 
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
+
   justify-content: center;
 
   gap: 24px;
