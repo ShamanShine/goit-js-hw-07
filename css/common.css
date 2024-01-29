@@ -16,7 +16,7 @@ body {
 .gallery {
 
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 
   gap: 24px;
   margin-left: 156px;
