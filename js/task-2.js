@@ -29,33 +29,26 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   ];
 
-  // Итерируем по массиву изображений и добавим их в галерею
-  images.forEach(function (image) {
-    // Создаем новый элемент li
-    const liElement = document.createElement('li');
+  const galleryHtml = images
+    .map(function (image) {
+      return `<li><img src="${image.url}" alt="${image.alt}" style="width: 360px; height: 300px;"></li>`;
+    })
+    .join(''); // объединяем все элементы в одну строку
 
-    // Создаем новый элемент img
-    const imgElement = document.createElement('img');
-
-    // Установим атрибуты для изображения
-    imgElement.src = image.url;
-    imgElement.alt = image.alt;
-
-    // Добавим изображение в элемент списка
-    liElement.append(imgElement);
-
-    // Добавляем элемент списка в галерею
-    galleryList.append(liElement);
-  });
+  // Добавляем строку html в галерею
+  galleryList.innerHTML = galleryHtml;
 
   // Добавим стили через JS
   galleryList.style.display = 'flex';
   galleryList.style.padding = '0';
   galleryList.style.listStyle = 'none';
-
-  const galleryImages = document.querySelectorAll('.gallery img');
-  galleryImages.forEach(function (img) {
-    img.style.width = '360px';
-    img.style.height = '300px';
-  });
 });
+
+// На що буде звертати увагу ментор при перевірці:
+// Створена й додана в DOM галерея із шести зображень
+// Галерея додана у список ul.gallery і являє собою 6 елементів <li>, в які вкладені елементи <img>
+// Для створення елементів <img> використані дані з масиву об’єктів images
+// Усі елементи галереї додані в DOM за одну операцію додавання
+// Є мінімальне оформлення галереї флексбоксами через CSS класи
+
+// Извиняюсь, в ТЗ указано 6 элеменов, поэтому я добавил 6 (как на макете) Убрать?

@@ -1,4 +1,4 @@
-// Сначала находим все элементы ul с ID# 'categories'
+// выбираем список 'categories'
 const categoriesList = document.getElementById('categories');
 // затем все элементы li.item в списке ul#categories
 const categoryItems = categoriesList.querySelectorAll('li.item');

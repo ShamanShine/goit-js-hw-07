@@ -3,7 +3,6 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
-
 document.addEventListener('DOMContentLoaded', function () {
   const controlsDiv = document.getElementById('controls');
   const input = controlsDiv.querySelector('input');
@@ -13,8 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   createButton.addEventListener('click', function () {
     const amount = Number(input.value);
-
-    // Проверяем, введено ли корректное число в пределах от 1 до 100
+    // Проверяем, корректное ли число в пределах от 1 до 100
     if (amount >= 1 && amount <= 100) {
       createBoxes(amount, boxesDiv);
       input.value = ''; // Очищаем значение input
@@ -22,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
       alert('Введите число от 1 до 100.');
     }
   });
-
   destroyButton.addEventListener('click', function () {
     destroyBoxes(boxesDiv);
   });
@@ -31,6 +28,9 @@ document.addEventListener('DOMContentLoaded', function () {
 function createBoxes(amount, parent) {
   const initialSize = 30;
   const step = 10;
+
+  parent.innerHTML = ''; // Очищаем содержимое родительского элемента перед добавлением новых блоков. работает)
+
   // функция создает указанное количество div элементов, устанавливает для каждого размеры, цвет фона. После она добавляет эти элементы в родительский элемент (переданный как аргумент).
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
@@ -40,7 +40,6 @@ function createBoxes(amount, parent) {
     parent.appendChild(box);
   }
 }
-
 function destroyBoxes(parent) {
   parent.innerHTML = '';
 }
