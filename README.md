@@ -1,3 +1,3 @@
-# goit-js-hw-06
+# goit-js-hw-07
 
-JS. Topic: #6
+JS. Topic: #7
