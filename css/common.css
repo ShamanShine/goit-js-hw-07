@@ -15,11 +15,11 @@ body {
 
 .gallery {
 
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
 
-  justify-content: center;
+  justify-content: space-around;
 
-  gap: 24px;
+  gap: 30px;
   margin-left: 156px;
   margin-top: 100px;
   margin-right: 156px;
